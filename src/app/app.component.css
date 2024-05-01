@@ -6,68 +6,50 @@
     margin-top: 10px;
     border: 2 px solid blue;  
 }
+
 h3{
     margin-left: 80px;
 }
 
 
 .input-result{
-    width: 300px;
+    width: 23.5rem;
     height: 30px;
     font-size: 20px;
+    padding: 2px;
+    margin-bottom: 2px;
 }
 
-.operand{ 
-    margin-top: 20px;
-    width: 4.8rem;
-    height: 2.5rem;
-    font-size: 25px;
-    border-radius: 10px;
-    background-color: rgba(173, 203, 210, 0.845);  
-}
 .numbers{ 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 6.40rem;
     height: 2.5rem;
     font-size: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgba(199, 205, 208, 0.784);  
+    margin-bottom: 7.5rem;
 }
+
+.button{
+    height: 2.5rem;
+    width: 6rem;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
 .error{
-    margin-top: 2px;
-    
     color: crimson;
-    
 }
 .clear{
-    display: inline-block;
-    padding: 2px 4px;   
-    width: 4rem;
-    height: 2.5rem;
-    font-size: 15px;
-    border-radius: 10px;
     background-color: rgb(170, 155, 160);    
-
 }
 
 .delete{
-    display: inline-block;
-    padding: 2px 4px; 
-    width: 6rem;
-    height: 2.5rem;
-    font-size: 15px;
-    border-radius: 10px;
     background-color: rgb(213, 158, 177);    
-
+    width: 12rem;
 }
-.equal{
-    display: inline-block;
-    padding: 2px 4px;   
-    width: 9.2rem;
-    height: 2.5rem;
-    font-size: 15px;
-    border-radius: 10px;
-    background-color: rgb(180, 189, 152);   
 
+.equal{
+    background-color: rgb(180, 189, 152);   
 }

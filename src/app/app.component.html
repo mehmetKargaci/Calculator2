@@ -3,9 +3,9 @@
   <div>
     <h3>Angular Calculator</h3>
     <div>
-      <div class="form-group" >
+      <div>
         @for (r of results; track $index) {
-          <div *ngIf="!errormessage"> {{ r.operation }} = {{  r.result }}</div>
+          <div> {{ r.operation }} = {{  r.result }}</div>
         }
         <div >
           <input class="input-result" [formControl]="inputControl" >
@@ -13,20 +13,16 @@
         <div class="error" *ngIf="errormessage">
           invalid enterence.
         </div>
-
       </div>
-      <div class="grid" *ngFor="let button of buttons" >
-        <ng-container>
-          <button class="numbers" type="button" (click)="pressNum('{{button}}')">{{button}}</button>         
-          
-        </ng-container>        
-        
 
+      <div class="numbers">
+          <button *ngFor="let button of buttons" class="button" type="button" (click)="pressNum(button)">{{button}}</button>               
       </div>
-      <div class="result">
-        <button class="clear" type="button" (click)="clear()">Clr</button>
-        <button class="delete" type="button" (click)="deleteAll()">Delete All</button>
-        <button class="equal" type="button" (click)="calculate()">=</button>
+
+      <div>
+        <button class="button clear" type="button" (click)="clear()">Clear</button>
+        <button class="button delete" type="button" (click)="deleteAll()">Delete All</button>
+        <button class="button equal" type="button" (click)="calculate()">=</button>
       </div>
     </div>
   </div>  
