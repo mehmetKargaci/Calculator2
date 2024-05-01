@@ -1,0 +1,46 @@
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border: 2 px solid blue;  
+}
+
+.operand{ 
+    margin-top: 5px;
+    width: 2.36rem;
+    background-color: rgb(122, 221, 240);  
+}
+.numbers{ 
+    width: 3.14rem;
+    background-color: rgb(204, 226, 238);  
+}
+.error{
+    margin-top: 2px;
+    
+    color: crimson;
+    
+}
+.clear{
+    display: inline-block;
+    padding: 2px 4px;   
+    width: 2rem;
+    background-color: rgb(170, 155, 160);    
+
+}
+
+.delete{
+    display: inline-block;
+    padding: 2px 4px; 
+    width: 4.4rem;
+    background-color: rgb(241, 138, 174);    
+
+}
+.equal{
+    display: inline-block;
+    padding: 2px 4px;   
+    width: 3rem;
+    background-color: rgb(216, 232, 168);   
+
+}
