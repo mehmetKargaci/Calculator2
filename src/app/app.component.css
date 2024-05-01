@@ -6,15 +6,29 @@
     margin-top: 10px;
     border: 2 px solid blue;  
 }
+h3{
+    margin-left: 80px;
+}
+.input-result{
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
 
 .operand{ 
-    margin-top: 5px;
-    width: 2.36rem;
-    background-color: rgb(122, 221, 240);  
+    margin-top: 20px;
+    width: 4.8rem;
+    height: 2.5rem;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: rgba(173, 203, 210, 0.845);  
 }
 .numbers{ 
-    width: 3.14rem;
-    background-color: rgb(204, 226, 238);  
+    width: 6.40rem;
+    height: 2.5rem;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: rgba(199, 205, 208, 0.784);  
 }
 .error{
     margin-top: 2px;
@@ -25,7 +39,10 @@
 .clear{
     display: inline-block;
     padding: 2px 4px;   
-    width: 2rem;
+    width: 4rem;
+    height: 2.5rem;
+    font-size: 15px;
+    border-radius: 10px;
     background-color: rgb(170, 155, 160);    
 
 }
@@ -33,14 +50,20 @@
 .delete{
     display: inline-block;
     padding: 2px 4px; 
-    width: 4.4rem;
-    background-color: rgb(241, 138, 174);    
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(213, 158, 177);    
 
 }
 .equal{
     display: inline-block;
     padding: 2px 4px;   
-    width: 3rem;
-    background-color: rgb(216, 232, 168);   
+    width: 9.2rem;
+    height: 2.5rem;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(180, 189, 152);   
 
 }

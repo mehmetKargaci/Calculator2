@@ -26,7 +26,8 @@ export class AppComponent implements OnInit{
 
   deleteAll(){
     this.inputControl.setValue('');
-    this.errormessage = false;
+    this.errormessage = true;
+    
   }
   clear(){    
   
@@ -69,8 +70,12 @@ export class AppComponent implements OnInit{
           console.log('Invalid value');
           this.errormessage = true;
         }
-        this.results.push({ operation: value || '', result: this.result})
-        break;
+        if(this.errormessage===false){
+          this.results.push({ operation: value || '', result: this.result})
+          break;         
+        }
+      
+
       }
     }
 

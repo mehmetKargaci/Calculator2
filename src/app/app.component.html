@@ -3,15 +3,12 @@
   <div>
     <h3>Angular Calculator</h3>
     <div>
-      <div class="form-group">
+      <div class="form-group" >
         @for (r of results; track $index) {
-          <div> {{ r.operation }} = {{  r.result }}</div>
+          <div *ngIf="!errormessage"> {{ r.operation }} = {{  r.result }}</div>
         }
         <div >
-          <input class="result" [formControl]="inputControl">
-        </div>
-        <div class="error" *ngIf="inputControl.errors">
-          invalid enterence.
+          <input class="input-result" [formControl]="inputControl" >
         </div>
         <div class="error" *ngIf="errormessage">
           invalid enterence.
