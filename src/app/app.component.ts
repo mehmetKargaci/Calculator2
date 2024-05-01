@@ -26,6 +26,7 @@ export class AppComponent implements OnInit{
 
   deleteAll(){
     this.inputControl.setValue('');
+    this.errormessage = false;
   }
   clear(){    
   
@@ -63,9 +64,10 @@ export class AppComponent implements OnInit{
           this.result = parseFloat(firstNumber) / 100 ;
         }
 
-
-        if (isNaN(Number(firstNumber)) || isNaN(+secondNumber)){
-          console.log('Invalid value')
+        
+        if (isNaN(Number(firstNumber)) || isNaN(+secondNumber) && (operator !== '+' || '-' || '*'||'/'||'%')){
+          console.log('Invalid value');
+          this.errormessage = true;
         }
         this.results.push({ operation: value || '', result: this.result})
         break;
