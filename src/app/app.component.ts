@@ -9,6 +9,7 @@ import { FormControl, FormGroup , Validators} from '@angular/forms';
 export class AppComponent implements OnInit{
 
   inputControl =  new FormControl('');
+  buttons = ['+', '-', '*', '/','%', '7', '8','9', '4','5','6','1','2','3','0','.','%', 'Delete all', '=']
   errormessage= false;
 
   result!: number;
