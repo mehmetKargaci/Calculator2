@@ -3,7 +3,7 @@
   <div>
     <h3>Angular Calculator</h3>
     <div>
-      <div>
+      <div class="result">
         @for (r of results; track $index) {
           <div> {{ r.operation }} = {{  r.result }}</div>
         }
@@ -16,14 +16,11 @@
       </div>
 
       <div class="numbers">
-          <button *ngFor="let button of buttons" class="button" type="button" (click)="pressNum(button)">{{button}}</button>               
-      </div>
-
-      <div>
-        <button class="button clear" type="button" (click)="clear()">Clear</button>
-        <button class="button delete" type="button" (click)="deleteAll()">Delete All</button>
-        <button class="button equal" type="button" (click)="calculate()">=</button>
+        <button *ngFor="let button of buttons" class="button" type="button" (click)="pressNum(button)">{{button}}</button>
+        <button class="clear" type="button" (click)="clear()">Clear</button>
+        <button class="delete" type="button" (click)="deleteAll()">Delete All</button>
+        <button class="equal" type="button" (click)="calculate()">=</button>
       </div>
     </div>
-  </div>  
+  </div>
 </div>

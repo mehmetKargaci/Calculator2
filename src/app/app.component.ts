@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
 
   deleteAll() {
     this.inputControl.setValue('');
-    this.errormessage = true;
     this.results = [];
   }
 
@@ -37,10 +36,10 @@ export class AppComponent implements OnInit {
 
   calculate() {
     const value = this.inputControl.value;
-    const opeartors = ['+', '-', '*', '/', '%'];
+    const operators = ['+', '-', '*', '/', '%'];
 
     // Find operator
-    for (const operator of opeartors) {
+    for (const operator of operators) {
       const index = value?.indexOf(operator) || -1;
       if (index > -1) {
         console.log(this.results)
@@ -56,7 +55,7 @@ export class AppComponent implements OnInit {
           if (operator === '+') {
             this.result = parseFloat(firstNumber) + parseFloat(secondNumber);
           }
-          //substruct operator
+          //substructure operator
           if (operator === '-') {
             this.result = parseFloat(firstNumber) - parseFloat(secondNumber);
           }

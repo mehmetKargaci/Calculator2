@@ -1,55 +1,76 @@
 .container{
-    height: 80vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    border: 2 px solid blue;  
 }
 
 h3{
-    margin-left: 80px;
+  padding-left: 6rem;
+  font-size: 2rem;
+  color: rgba(184, 95, 163, 0.91);
 }
-
-
 .input-result{
-    width: 23.5rem;
-    height: 30px;
-    font-size: 20px;
-    padding: 2px;
-    margin-bottom: 2px;
+  width:27rem;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  padding-left: 20px;
+  border: 2px solid rgba(147, 217, 232, 0.87);
+  border-radius: 30px;
+  color: #353535;
 }
 
-.numbers{ 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 6.40rem;
-    height: 2.5rem;
-    font-size: 25px;
-    border-radius: 20px;
-    background-color: rgba(199, 205, 208, 0.784);  
-    margin-bottom: 7.5rem;
+.numbers{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 6.40rem;
+  height: 2.5rem;
+  font-size: 25px;
+  border-radius: 30px;
+  margin-bottom: 7.5rem;
+
 }
 
-.button{
-    height: 2.5rem;
+.numbers button{
     width: 6rem;
-    border-radius: 7px;
-    font-size: 18px;
+    color: #61677c;
+    box-shadow: -5px -5px 20px #ffffff,
+    5px 5px 20px #babecc;
+    border: none;
+    outline: none;
+    padding: 16px;
+    background: #ebecf0;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    transition: all 0.2s ease-in-out;
+}
+
+.numbers button:hover{
+  box-shadow: -2px -2px 5px #fff,
+  2px 2px 5px #babecc;
+}
+
+.numbers button:active{
+  box-shadow: inset -1px -1px 2px #babecc,
+  inset -1px -1px 2px #fff;
 }
 
 .error{
-    color: crimson;
-}
-.clear{
-    background-color: rgb(170, 155, 160);    
+    color: crimson !important;
 }
 
 .delete{
-    background-color: rgb(213, 158, 177);    
-    width: 12rem;
+  grid-column: span 2;
+  min-width: 13rem;
 }
 
-.equal{
-    background-color: rgb(180, 189, 152);   
-}
+
+
+
