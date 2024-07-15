@@ -1,21 +1,24 @@
 
-<div class="container flex flex-col justify-center items-center mt-10">
-  <h1 class="text-2xl m-2 text-center text-fuchsia-700 font-medium">Angular Calculator</h1>
-  <div class="result">
-    @for (r of results; track $index) {
-      <div> {{ r.operation }} = {{  r.result }}</div>
-    }
-    <div >
-      <input class="m-4 text-xl border-2 rounded" [formControl]="inputControl" >
+<div class="container flex flex-col justify-center items-center mt-4">
+  <div class=" border-b-cyan-100 flex flex-col justify-center items-center min-h-full">
+    <h1 class="text-2xl m-2 text-center text-fuchsia-700 font-medium">Angular Calculator</h1>
+    <div class="p-4">
+      @for (r of results; track $index) {
+        <div class="pl-4"> {{ r.operation }} = {{  r.result }}</div>
+      }
+      <div >
+        <input class="m-4 p-2 text-xl border-2 border-cyan-400 w-72 rounded" [formControl]="inputControl" >
+      </div>
+      <div class="text-rose-700" *ngIf="errormessage">
+        invalid enterence.
+      </div>
     </div>
-    <div class="text-rose-700" *ngIf="errormessage">
-      invalid enterence.
+    <div class="grid grid-cols-4 w-72 h-48" >
+      <button *ngFor="let button of buttons" class="text-2xl m-1 p-4 bg-[#ebecf0] inline-flex justify-center items-center border-2 shadow-md rounded-md hover:text-[#babecc] hover:shadow-xl focus:ring-1" type="button" (click)="pressNum(button)">{{button}}</button>
+      <button class="border-2 rounded-md text-[#61677c] bg-[#ebecf0] h-14 m-1 hover:text-[#babecc] hover:shadow-xl focus:ring-1" type="button" (click)="clear()">Clear</button>
+      <button class="border-2 rounded-md m-1 col-span-2 text-[#61677c] bg-[#ebecf0]  hover:text-[#babecc] hover:shadow-xl focus:ring-1" type="button" (click)="deleteAll()">Delete All</button>
+      <button class="border-2 rounded-md m-1 text-[#61677c] bg-[#ebecf0] hover:text-[#babecc] hover:shadow-xl focus:ring-1" type="button" (click)="calculate()">=</button>
     </div>
   </div>
-  <div class="grid grid-cols-4 w-52 h-52" >
-    <button *ngFor="let button of buttons" class="text-2xl text-[#61677c] border-2 rounded-md hover:text-[#babecc]" type="button" (click)="pressNum(button)">{{button}}</button>
-    <button class="border-2 rounded-md text-[#61677c] hover:text-[#babecc]" type="button" (click)="clear()">Clear</button>
-    <button class="border-2 rounded-md col-span-2 text-[#61677c] hover:text-[#babecc]" type="button" (click)="deleteAll()">Delete All</button>
-    <button class="border-2 rounded-md  text-[#61677c] hover:text-[#babecc]" type="button" (click)="calculate()">=</button>
-  </div>
+
 </div>
