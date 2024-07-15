@@ -1,26 +1,21 @@
 
-<div class="container">
-  <div>
-    <h3>Angular Calculator</h3>
-    <div>
-      <div class="result">
-        @for (r of results; track $index) {
-          <div> {{ r.operation }} = {{  r.result }}</div>
-        }
-        <div >
-          <input class="input-result" [formControl]="inputControl" >
-        </div>
-        <div class="error" *ngIf="errormessage">
-          invalid enterence.
-        </div>
-      </div>
-
-      <div class="numbers">
-        <button *ngFor="let button of buttons" class="button" type="button" (click)="pressNum(button)">{{button}}</button>
-        <button class="clear" type="button" (click)="clear()">Clear</button>
-        <button class="delete" type="button" (click)="deleteAll()">Delete All</button>
-        <button class="equal" type="button" (click)="calculate()">=</button>
-      </div>
+<div class="container flex flex-col justify-center items-center mt-10">
+  <h1 class="text-2xl m-2 text-center text-fuchsia-700 font-medium">Angular Calculator</h1>
+  <div class="result">
+    @for (r of results; track $index) {
+      <div> {{ r.operation }} = {{  r.result }}</div>
+    }
+    <div >
+      <input class="m-4 text-xl border-2 rounded" [formControl]="inputControl" >
     </div>
+    <div class="text-rose-700" *ngIf="errormessage">
+      invalid enterence.
+    </div>
+  </div>
+  <div class="grid grid-cols-4 w-52 h-52" >
+    <button *ngFor="let button of buttons" class="text-2xl text-[#61677c] border-2 rounded-md hover:text-[#babecc]" type="button" (click)="pressNum(button)">{{button}}</button>
+    <button class="border-2 rounded-md text-[#61677c] hover:text-[#babecc]" type="button" (click)="clear()">Clear</button>
+    <button class="border-2 rounded-md col-span-2 text-[#61677c] hover:text-[#babecc]" type="button" (click)="deleteAll()">Delete All</button>
+    <button class="border-2 rounded-md  text-[#61677c] hover:text-[#babecc]" type="button" (click)="calculate()">=</button>
   </div>
 </div>

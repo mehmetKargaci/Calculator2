@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   deleteAll() {
     this.inputControl.setValue('');
     this.results = [];
+    this.errormessage = false;
   }
 
   clear() {
