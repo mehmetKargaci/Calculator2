@@ -14,10 +14,10 @@
       </div>
     </div>
     <div class="grid grid-cols-4 w-72 h-48" >
-      <button *ngFor="let button of buttons" class="text-2xl m-1 p-4 bg-[#ebecf0] inline-flex justify-center items-center border-2 shadow-md rounded-md hover:text-[#babecc] hover:shadow-xl focus:ring-1" type="button" (click)="pressNum(button)">{{button}}</button>
-      <button class="border-2 rounded-md text-[#61677c] bg-[#ebecf0] h-14 m-1 hover:text-[#babecc] hover:shadow-xl focus:ring-1" type="button" (click)="clear()">Clear</button>
-      <button class="border-2 rounded-md m-1 col-span-2 text-[#61677c] bg-[#ebecf0]  hover:text-[#babecc] hover:shadow-xl focus:ring-1" type="button" (click)="deleteAll()">Delete All</button>
-      <button class="border-2 rounded-md m-1 text-[#61677c] bg-[#ebecf0] hover:text-[#babecc] hover:shadow-xl focus:ring-1" type="button" (click)="calculate()">=</button>
+      <button *ngFor="let button of buttons" class="text-2xl m-1 p-4 bg-[#ebecf0] inline-flex justify-center items-center border-2 shadow-md rounded-md text-stone-700 hover:text-sky-500 hover:shadow-xl focus:ring-1" type="button" (click)="pressNum(button)">{{button}}</button>
+      <button class="border-2 rounded-md text-stone-700 bg-[#ebecf0] h-14 m-1 hover:text-sky-500 hover:shadow-xl focus:ring-1" type="button" (click)="clear()">Clear</button>
+      <button class="border-2 rounded-md m-1 col-span-2 text-stone-700 bg-[#ebecf0]  hover:text-sky-500 hover:shadow-xl focus:ring-1" type="button" (click)="deleteAll()">Delete All</button>
+      <button class="border-2 rounded-md m-1 text-stone-700 bg-[#ebecf0] hover:text-sky-500 hover:shadow-xl focus:ring-1" type="button" (click)="calculate()">=</button>
     </div>
   </div>
 
